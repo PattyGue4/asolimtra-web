@@ -57,3 +57,37 @@ function slideActual(n) {
 setInterval(() => {
   moverCarrusel(1);
 }, 4000);
+
+const sliders={};
+
+function cambiarMiniSlide(id,direccion){
+
+    let slider=document.getElementById(id);
+
+    let slides=slider.querySelectorAll(".mini-slide");
+
+    if(sliders[id]==undefined){
+
+        sliders[id]=0;
+
+    }
+
+    slides[sliders[id]].classList.remove("activo-mini");
+
+    sliders[id]+=direccion;
+
+    if(sliders[id]>=slides.length){
+
+        sliders[id]=0;
+
+    }
+
+    if(sliders[id]<0){
+
+        sliders[id]=slides.length-1;
+
+    }
+
+    slides[sliders[id]].classList.add("activo-mini");
+
+}

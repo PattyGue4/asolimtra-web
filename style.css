@@ -606,3 +606,146 @@ footer p {
 .whatsapp i{
     font-size: 20px;
 }
+
+/* =========================
+   CAPACITACIONES ASOLIMTRA
+========================= */
+
+.capacitaciones-grid {
+  display: grid;
+  gap: 35px;
+  margin-top: 35px;
+}
+
+.capacitacion {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(12, 43, 128, 0.14);
+  border: 1px solid #e4eaff;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.capacitacion:hover {
+  transform: translateY(-6px);
+}
+
+.capacitacion-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.capacitacion-info h3 {
+  color: #0c2b80;
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.capacitacion-info p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #2b3b55;
+}
+
+.datos-capacitacion {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.datos-capacitacion span {
+  background: #eef3ff;
+  color: #0c2b80;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Carrusel pequeño de capacitaciones */
+
+.mini-slider {
+  width: 100%;
+  max-width: 420px;
+  height: 320px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f8faff;
+  box-shadow: inset 0 0 0 1px #e4eaff;
+}
+
+.mini-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f8faff;
+}
+
+.activo-mini {
+  display: block;
+}
+
+.mini-prev,
+.mini-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #0c2b80;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.22);
+  z-index: 10;
+}
+
+.mini-prev {
+  left: 14px;
+}
+
+.mini-next {
+  right: 14px;
+}
+
+.mini-prev:hover,
+.mini-next:hover {
+  background: #0c2b80;
+  color: white;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .capacitacion {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .capacitacion-info {
+    padding: 15px;
+  }
+
+  .mini-slider {
+    max-width: 100%;
+    height: 280px;
+  }
+
+  .datos-capacitacion {
+    justify-content: center;
+  }
+}
